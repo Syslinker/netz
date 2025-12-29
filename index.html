@@ -73,15 +73,10 @@ footer {
   margin-top: 3rem;
 }
 
-/* Budget & Person */
-.budget-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
+/* Budget */
+.budget-section, .budget-person {
+  text-align: center;
   margin: 2rem 0;
-  width: 100%;
 }
 
 .budget-section img {
@@ -90,16 +85,8 @@ footer {
   height: auto;
 }
 
-
-.budget-person {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
 .budget-person img {
-  width: 30%;
+  width: 50%;
   max-width: 150px;
   height: auto;
   border-radius: 50%;
@@ -107,26 +94,14 @@ footer {
 }
 
 .budget-person .info {
-  text-align: left;
+  margin-top: 1rem;
   color: #090909;
-  flex: 1;
 }
 
-/* Responsive Text Centering */
+/* Responsive */
 @media (max-width: 600px) {
-  .budget-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .budget-person {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .budget-person .info {
-    text-align: center;
+  .budget-section img, .budget-person img {
+    width: 80%;
   }
 }
 </style>
@@ -185,19 +160,19 @@ footer {
   </div>
 </div>
 
-<div class="budget-wrapper">
-  <div class="budget-section">
-    <img src="images/Zertifikat.png" alt="Budget 1">
-  </div>
+<!-- Zertifikat -->
+<div class="budget-section">
+  <img src="images/Zertifikat.png" alt="Zertifikat">
+</div>
 
-  <div class="budget-person">
-    <img src="images/foto.png" alt="Maher Akram">
-    <div class="info">
-      <h3>Maher Akram</h3>
-      <p>***WEBSEITE IST TEST , Es ist nicht offiziell***</p>
-      <p>Persönlicher WLAN-Service für Privatkunden.</p>
-      <p>Email: TEST@test.test<br>Telefon: +49 123 456789</p>
-    </div>
+<!-- Persönliches Foto -->
+<div class="budget-person">
+  <img src="images/foto.png" alt="Maher Akram">
+  <div class="info">
+    <h3>Maher Akram</h3>
+    <p>***WEBSEITE IST TEST , Es ist nicht offiziell***</p>
+    <p>Persönlicher WLAN-Service für Privatkunden.</p>
+    <p>Email: TEST@test.test<br>Telefon: +49 123 456789</p>
   </div>
 </div>
 
