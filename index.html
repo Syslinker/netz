@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 body{margin:0;font-family:Arial;background:#f4f7fa;color:#333}
-header{background:#1a73e8;color:#fff;padding:2rem 1rem;text-align:center}
-header img.logo{width:90px;margin-bottom:1rem}
+header{background:#3686ef95;color:#191919;padding:1rem 1rem;text-align:center}
+header img.logo{width:120px;margin-bottom:0rem}
 .container{max-width:1100px;margin:2rem auto;padding:1rem}
 .intro{text-align:center;margin-bottom:3rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
@@ -17,10 +17,12 @@ header img.logo{width:90px;margin-bottom:1rem}
 .card .desc{padding:1rem}
 footer{background:#333;color:#eee;text-align:center;padding:1rem;margin-top:3rem}
 .budget-section{display:flex;justify-content:center;align-items:center;gap:2rem;margin:2rem 0;flex-wrap:wrap;}
-.budget-section img{width:200px;height:200px;}
+.budget-section img{width:250px;height:200px;}
 .budget-person{display:flex;justify-content:center;align-items:center;gap:1.5rem;flex-wrap:wrap;margin-top:1rem;}
 .budget-person img{width:150px;height:150px;border-radius:50%;object-fit:cover;}
 .budget-person .info{text-align:left;color:#090909;}
+.budget-wrapper {display: flex;gap: 2rem; justify-content:center; align-items: flex-start; width: 100%;}
+
 </style>
 </head>
 <body>
@@ -34,7 +36,7 @@ footer{background:#333;color:#eee;text-align:center;padding:1rem;margin-top:3rem
 <div class="container">
 
 <div class="intro">
-<h2>Was wir machen</h2>
+<h2>Unsere Leistungen</h2>
 <p>
 Unser Team sorgt dafür, dass Ihr WLAN wieder rund läuft,
 Egal ob langsames Internet, ständige Abbrüche oder störende Nachbar-Netze,
@@ -79,23 +81,22 @@ Richtige Platzierung von Repeatern für bestes WLAN.
 
 </div>
 
-<!-- Budget-Bilder unten -->
-<div class="budget-section">
-  <img src="images/budget1.png" alt="Budget 1">
-  <img src="images/budget2.png" alt="Budget 2">
-  <img src="images/budget3.png" alt="Budget 3">
-</div>
+<div class="budget-wrapper">
+  <div class="budget-section">
+    <img src="images/Zertifikat.png" alt="Budget 1">
+  </div>
 
-<!-- Nutzerfoto und Name unten -->
-<div class="budget-person">
-  <img src="images/foto.png" alt="Maher Akram">
-  <div class="info">
-    <h3>Maher Akram</h3>
-    <p>***WEBSEITE IST TEST , Es ist nicht offiziell***</p>
-    <p>Persönlicher WLAN-Service für Privatkunden.</p>
-    <p>Email: TEST@test.test<br>Telefon: +49 123 456789</p>
+  <div class="budget-person">
+    <img src="images/foto.png" alt="Maher Akram">
+    <div class="info">
+      <h3>Maher Akram</h3>
+      <p>***WEBSEITE IST TEST , Es ist nicht offiziell***</p>
+      <p>Persönlicher WLAN-Service für Privatkunden.</p>
+      <p>Email: TEST@test.test<br>Telefon: +49 123 456789</p>
+    </div>
   </div>
 </div>
+
 
 <footer>
 <p>&copy; *** 20 Net*Pr* ***</p>
