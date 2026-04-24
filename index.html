@@ -3,193 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NetzPro Solutions</title>
+<title>NetzPro Solutions | Ihr WLAN-Experte vor Ort</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f7fa;
-  color: #333;
-}
+    :root { --blue: #1a73e8; --green: #25D366; --orange: #ff9900; --light: #f8f9fa; }
+    body { margin:0; font-family: 'Segoe UI', Arial, sans-serif; background: #fff; color: #333; line-height: 1.5; }
+    
+    header { background: var(--blue); color: #fff; padding: 3rem 1rem; text-align: center; }
+    header img.logo { width: 100px; margin-bottom: 1rem; border-radius: 50%; background: #fff; padding: 5px; }
+    header h1 { font-size: 2.5rem; margin: 0; }
+    header p { font-size: 1.2rem; opacity: 0.9; }
 
-/* Header */
-header {
-  background: #3686ef95;
-  color: #191919;
-  padding: 1rem;
-  text-align: center;
-}
+    .container { max-width: 1000px; margin: auto; padding: 2rem; }
+    .section { padding: 3rem 0; border-bottom: 1px solid #eee; text-align: center; }
+    .icon-box { font-size: 3rem; color: var(--blue); margin-bottom: 1rem; }
+    h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--blue); }
+    
+    /* 1. Hilfe Grid */
+    .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .prob-item { background: var(--light); padding: 1.5rem; border-radius: 10px; border-left: 5px solid var(--orange); }
 
-header img.logo {
-  width: 100px;
-  max-width: 120px;
-  margin-bottom: 0.5rem;
-}
+    /* 2. Zertifikat */
+    .cert-badge { display: inline-block; background: #e8f0fe; padding: 0.8rem 1.5rem; border-radius: 50px; border: 2px dashed var(--blue); font-weight: bold; margin: 1rem 0; }
+    .cert-img { width: 100%; max-width: 450px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: 1rem; }
 
-/* Container */
-.container {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 1rem;
-}
+    /* 3. Vor Ort & Persönliches Foto */
+    .check-list { text-align: left; display: inline-block; margin: 1rem 0; }
+    .check-list div { margin: 0.5rem 0; font-size: 1.1rem; }
+    .check-list i { color: var(--blue); margin-right: 10px; }
+    .personal-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--blue); margin-top: 1.5rem; }
 
-/* Intro */
-.intro {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-/* Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.1);
-  overflow: hidden;
-}
-
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.card .desc {
-  padding: 1rem;
-}
-
-/* Footer */
-footer {
-  background: #333;
-  color: #eee;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 3rem;
-}
-
-/* Budget */
-.budget-section, .budget-person {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.budget-section img {
-  width: 60%;
-  max-width: 300px;
-  height: auto;
-}
-
-.budget-person img {
-  width: 50%;
-  max-width: 150px;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.budget-person .info {
-  margin-top: 1rem;
-  color: #090909;
-}
-
-.whatsapp-button {
-  display: inline-block;
-  background-color: #25d366;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .budget-section img, .budget-person img {
-    width: 80%;
-  }
-}
+    /* 4. WhatsApp */
+    .whatsapp-card { background: var(--green); color: #fff; padding: 2.5rem; border-radius: 20px; margin-top: 2rem; }
+    .wa-btn { background: #fff; color: var(--green); padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-block; margin-top: 1.5rem; }
 </style>
 </head>
 <body>
 
 <header>
-  <img src="images/logo.png" alt="Logo" class="logo">
-  <h1>NetzPro Solutions</h1>
-  <p>Ihr WLAN-Techniker für Zuhause</p>
+    <img src="images/logo1.png" alt="NetzPro Solutions Logo" class="logo">
+    <h1>NetzPro Solutions</h1>
+    <p>WLAN Probleme? Wir sind direkt für Sie da vor Ort und lösen das Problem.</p>
 </header>
 
 <div class="container">
-  <div class="intro">
-    <h2>Unsere Leistungen</h2>
-    <p>
-      Unser Team sorgt dafür, dass Ihr WLAN wieder rund läuft,
-      egal ob langsames Internet, ständige Abbrüche oder störende Nachbar-Netze.
-      Wir finden die Probleme, beheben Störungen, ersetzen defekte Geräte
-      und bringen Ihr Netzwerk wieder in Topform.
-    </p>
-  </div>
 
-  <div class="grid">
-    <div class="card">
-      <img src="images/foto2.png">
-      <div class="desc">
-        <strong>Ausgangssituation</strong><br>
-        Analyse von schlechtem oder instabilem WLAN.
-      </div>
+    <div class="section">
+        <div class="icon-box"><i class="fas fa-wifi"></i></div>
+        <h2>Wir helfen Ihnen sofort</h2>
+        <div class="problem-grid">
+            <div class="prob-item"><strong>Langsames WLAN?</strong><br>Wir maximieren Ihren Speed.</div>
+            <div class="prob-item"><strong>Verbindungsfehler?</strong><br>Wir finden jede Störquelle.</div>
+            <div class="prob-item"><strong>Kein Empfang?</strong><br>WLAN-Abdeckung im ganzen Haus.</div>
+        </div>
     </div>
 
-    <div class="card">
-      <img src="images/foto3.png">
-      <div class="desc">
-        <strong>WLAN-Messung</strong><br>
-        Messung von Signalstärke und Abdeckung im Haus.
-      </div>
+    <div class="section">
+        <div class="icon-box"><i class="fas fa-user-graduate"></i></div>
+        <h2>Professionell & Zertifiziert</h2>
+        <div class="cert-badge">Fokus: Netze & Verteilte Systeme</div>
+        <p>Wir arbeiten mit Cisco CCNA-Expertise und Profi-Analyse-Tools.</p>
+        <img src="images/Zertifikat.png" alt="Zertifikat" class="cert-img">
     </div>
 
-    <div class="card">
-      <img src="images/foto4.png">
-      <div class="desc">
-        <strong>Störungsanalyse</strong><br>
-        Erkennen von Störquellen und falschen Einstellungen.
-      </div>
+    <div class="section">
+        <div class="icon-box"><i class="fas fa-house-user"></i></div>
+        <h2>Wir kommen direkt zu Ihnen</h2>
+        <div class="check-list">
+            <div><i class="fas fa-check"></i> Einsatzort: Köln & Umgebung</div>
+            <div><i class="fas fa-check"></i> Termine nach WhatsApp-Vereinbarung</div>
+        </div>
+        <br>
+        <img src="images/foto.png" alt="Maher Akram" class="personal-img">
+        <p><strong>Maher Akram</strong><br>Ihr persönlicher Ansprechpartner</p>
     </div>
 
-    <div class="card">
-      <img src="images/foto5.png">
-      <div class="desc">
-        <strong>Optimierung</strong><br>
-        Richtige Platzierung von Repeatern für bestes WLAN.
-      </div>
+    <div class="section">
+    <div style="padding: 2rem; border-radius: 20px; background: #fff; border: 1px solid #eee;">
+        <i class="fab fa-whatsapp" style="font-size: 3rem; color: #25D366; margin-bottom: 1rem;"></i>
+        <h2 style="color: #333;">Termin bequem per WhatsApp buchen</h2>
+        <p style="color: #666;">Schreiben Sie uns einfach Ihr Anliegen. Wir antworten sofort.</p>
+        
+        <a href="https://wa.me/4915753231150?text=Hallo%20NetzPro%20Solutions,%20ich%20habe%20ein%20WLAN-Problem." 
+           style="display: inline-block; background-color: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 30px; font-weight: bold; margin-top: 15px; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);">
+            <i class="fab fa-whatsapp"></i> Jetzt WhatsApp schreiben
+        </a>
+        
+        <div style="margin-top: 20px; color: #1a73e8; font-weight: bold;">
+            <i class="fas fa-map-marker-alt"></i> Einsatzort: Köln & Umgebung
+        </div>
     </div>
-  </div>
 </div>
 
-<div class="budget-section">
-  <img src="images/Zertifikat.png" alt="Zertifikat">
 </div>
 
-<div class="budget-person">
-  <img src="images/foto.png" alt="Maher Akram">
-  <div class="info">
-    <h3>Maher Akram</h3>
-    <p>Persönlicher WLAN-Service für Privatkunden.</p>
-    <p><strong>Verfügbarkeit: Jederzeit</strong></p>
-    <p>Termine bequem über WhatsApp buchen:</p>
-    <a href="https://wa.me/4915753231150" class="whatsapp-button">
-      <i class="fab fa-whatsapp"></i> 01575 3231150
-    </a>
-  </div>
-</div>
-
-<footer>
-  <p>&copy; 2026 NetzPro Solutions</p>
+<footer style="text-align: center; padding: 2rem; background: #333; color: #fff;">
+    <p>&copy; 2026 NetzPro Solutions | Köln</p>
 </footer>
 
 </body>
